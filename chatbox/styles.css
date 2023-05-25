@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#adc4d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    width: 34%;
+    position: relative;
+}
+
+.header {
+    background-color: #6c93d8;
+    color: #fff;
+    display: flex;
+    padding: 20px;
+}
+
+.bullet {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ededed;
+    margin: 8px 12px 8px 5px;
+}
+
+.cross {
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 250px;
+    cursor: pointer; 
+}
+
+.cross:hover .line{
+    background: #fff;
+}
+
+.line {
+    position: absolute;
+    right: 0;
+    width: 22px;
+    height: 3px;
+    background: #D3DFF4;
+    border-radius: 3px;
+    justify-content: flex-end;
+}
+
+.line:first-child {
+    transform: rotate(45deg);
+}
+
+.line:last-child {
+    transform: rotate(-45deg);
+}
+
+.message-box {  
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.message-container {
+    max-width: 70%;
+    width: fit-content;
+    margin: 15px;
+}
+
+.message-container-to {
+    align-self: flex-end;
+}
+
+.message-time {
+    color: #999;
+    margin-bottom: 5px;
+    display: block; /* so time will be at the start if container is flex-start and  end if flex end*/
+    font-size: 12px;
+}
+
+.message-text-box {
+    padding: 15px;
+}
+
+.message-from {
+    font-size: 15px;
+    background: #e6edf6;
+    position: relative;
+    border-radius: 0 5px 5px 5px;
+}
+
+.message-from::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    border-style: solid;
+    border-color: #e6edf6 #e6edf6 transparent transparent; /* top and right border colored to form diagonal triangle */
+}
+
+.message-to {
+    font-size: 15px;
+    background: #f2f2f2;
+    position: relative;
+    border-radius: 5px 0 5px 5px;
+}
+
+.message-to::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -6px;
+    border-style: solid;
+    border-color: #f2f2f2 transparent transparent #f2f2f2 ; /* top and left border colored to form diagonal triangle */
+}
+
+.message-block {
+    background: #FFC2C1;
+    border-radius: 3px;
+    font-size: 15px;
+}
+.message-date {
+    color: #d8d6d6;
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.message-date::before {
+    content: '';
+    width: 40%;
+    height: 1px;
+    background: #d8d6d6;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+}
+
+.message-date::after {
+    content: '';
+    width: 40%;
+    height: 1px;
+    background: #d8d6d6;
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+
+.input-message {
+    border-top: 1px solid #ccc;
+    margin: 12px;
+}
+
+
+input[type="text"] {
+    outline: none;
+    padding: 10px 0;
+    font-size: 15px;
+    border: none;
+    width: 87%;
+}
+
+input[type="submit"] {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #6A96D8;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
